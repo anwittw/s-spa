@@ -59,9 +59,17 @@ function setBackground() {
 if($toogleButton1.classList.contains('active')) {
   console.log('night')
   $root.style.setProperty('--bg-img','url(images/night.jpg');
+  $root.style.setProperty('--bg-clr','black');
+  $root.style.setProperty('--bg-clr-inv','#F3F2F1');
+  $root.style.setProperty('--font-clr','#F3F2F1');
+
+
 } else {
   console.log('day')
   $root.style.setProperty('--bg-img','url(images/day.jpg');
+  $root.style.setProperty('--bg-clr','#F3F2F1');
+  $root.style.setProperty('--bg-clr-inv','black');
+  $root.style.setProperty('--font-clr','black');
 }
 }
 

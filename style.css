@@ -7,6 +7,9 @@ font-family: 'Roboto', sans-serif; */
 
 :root {
     --bg-img: url(images/day.jpg);
+    --bg-clr:  #F3F2F1;
+    --bg-clr-inv:  black;
+    --font-clr: black;
 
 }
 
@@ -14,6 +17,7 @@ font-family: 'Roboto', sans-serif; */
 
 body {
   background-image: var(--bg-img);
+  color: var(--font-clr);
   background-size: cover;
   margin: 0;
   display: flex;
@@ -30,16 +34,19 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-color: #F3F2F1;
-  height: 60vh;
-  min-width: 50vw;
+  background-color:  var(--bg-clr);
+  height: 76vh;
+  max-width: 66vw;
+  opacity: 0.7;
+  
+  
   /* border: 1px solid black; */
   border-radius:10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.53);
 }
 
 nav {
-  background-color: #F3F2F1 ;
+  background-color: var(--bg-clr);
   width: 100%;
 }
 
@@ -52,7 +59,7 @@ nav {
 
 #nav-elements>a {
   font-family: 'Roboto', sans-serif;
-  color: black;
+  color: var(--font-clr);
   border-radius: 3px 3px 0 0;
   padding: 20px;
   text-align: center;
@@ -73,6 +80,7 @@ nav {
 
 
 .toogle-btn {
+
   padding-left: 5px;
   padding-right: 5px;
   display: flex;
@@ -80,7 +88,7 @@ nav {
   align-items: center;
   width: 30px;
   height: 20px;;
-  background-color: #F3F2F1;
+  background-color: var(--bg-clr);
   border-radius: 30%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.53);
 
@@ -89,9 +97,16 @@ nav {
 .toogle-btn-inner {
   height: 10px;
   width: 10px;
-  background-color: black;
+  background-color: var(--bg-clr-inv);
   border-radius: 50%;
 
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 6vh;
+  right: 18vw;
 }
 
 .active {
@@ -101,4 +116,14 @@ nav {
 .flex {
   display: flex;
   justify-content: center;
+}
+
+.inner-content {
+  color: inherit;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  margin: 1vh auto;
+  max-width: 70%;
+  max-height: 90%;
+  text-align: justify;
 }
