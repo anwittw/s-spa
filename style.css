@@ -1,8 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto:500&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+:root {
+    --bg-img: url(images/day.jpg);
+
+}
+
 
 
 body {
-  background-image: url(images/IMG_0860.jpg);
+  background-image: var(--bg-img);
   background-size: cover;
   margin: 0;
   display: flex;
@@ -11,6 +22,8 @@ body {
   justify-content: center;
   height: 100vh;
 }
+
+
 
 .container {
   display: flex;
@@ -38,10 +51,54 @@ nav {
 }
 
 #nav-elements>a {
+  font-family: 'Roboto', sans-serif;
+  color: black;
   border-radius: 3px 3px 0 0;
   padding: 20px;
   text-align: center;
   text-decoration: none;
   /* border: 1px solid black; */
   width: 22%;
+  border-bottom: 1px solid #B0B0B0;
+}
+
+#nav-elements>a:nth-of-type(2) {
+  border-left: 1px solid #B0B0B0;
+  border-right: 1px solid #B0B0B0;
+}
+
+#nav-elements>a:nth-of-type(3) {
+  border-right: 1px solid #B0B0B0;
+}
+
+
+.toogle-btn {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30px;
+  height: 20px;;
+  background-color: #F3F2F1;
+  border-radius: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.53);
+
+}
+
+.toogle-btn-inner {
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+
+}
+
+.active {
+  justify-content: flex-end;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
 }
